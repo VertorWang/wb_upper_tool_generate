@@ -9,7 +9,8 @@
   - 点击上传文件
   ![image](https://github.com/VertorWang/wb_upper_tool_generate/assets/96033026/9548bbd3-851c-446f-baac-03204872af41)
   - 选择固件文件，填写上传log，完成上传
-  ![image](https://github.com/VertorWang/wb_upper_tool_generate/assets/96033026/2c19bba9-ba76-4c09-9dcb-5d42766f4158)
+  ![image](https://github.com/VertorWang/wb_upper_tool_generate/assets/96033026/15564efd-b318-4595-9fb7-bd107c1ad2ae)
+
 
 ## 从action产物中获取上位机
 - 进入Action选项卡
