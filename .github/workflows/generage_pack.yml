@@ -54,7 +54,7 @@ jobs:
       
       - run: ls .\wb_upper_tool\dist\*
       - name: Upload packages results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: upper_tool
           path: .\wb_upper_tool\dist\*
