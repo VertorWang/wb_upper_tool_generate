@@ -9,7 +9,7 @@ on:
       - 'firmware/**'
 jobs:
   GitHub-Generate-Pack:
-    runs-on: windows-2025
+    runs-on: windows-2022
     defaults:
       run:
         shell: powershell
@@ -25,20 +25,7 @@ jobs:
         run: |
           echo '${{ steps.file_changes.outputs.all_changed_files}}'
 
-      - name: Clone wb_upper_tool with PAT
-        shell: powershell
-        env:
-          ACCESS_TOKEN: ${{secrets.SOURCE_REPOSITORY}}
-        run: |
-          $url = "https://$env:ACCESS_TOKEN@github.com/VertorWang/wb_upper_tool.git"
-          git clone $url wb_upper_tool
-
-           if ($LASTEXITCODE -eq 0) {
-              echo "Clone successful"
-            } else {
-              echo "Failed to clone repository"
-              exit 1
-            }
+      - run: git clone ${{ secrets.SOURCE_REPOSITORY }} wb_upper_tool ; if ($?) { echo "Clone successful" } else { echo "Failed to clone repository" }
   
 
       - name: Set up Python 3.8
